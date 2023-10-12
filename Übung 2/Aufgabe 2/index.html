@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="ergebnis"><h1>Aufgabe 2</h1></div>
+
+    <!-------------
+      JavaScript
+    -------------->
+    <script>
+      /***********
+       * Verbindungsaufbau
+       ***********/
+      const element = document.getElementById("ergebnis");
+
+      /***********
+       * Funktion + Rechnen
+       ***********/
+      function rechnenplus(zahl1, zahl2) {
+        return zahl1 + zahl2;
+      }
+      /***********
+       * Funktion - Rechnen
+       ***********/
+      function rechnenminus(zahl1, zahl2) {
+        return zahl1 - zahl2;
+      }
+      /***********
+       * Funktion * Rechnen
+       ***********/
+      function rechnenmal(zahl1, zahl2) {
+        return zahl1 * zahl2;
+      }
+      /***********
+       * Funktion / Rechnen
+       ***********/
+      function rechnengeteilt(zahl1, zahl2) {
+        return zahl1 / zahl2;
+      }
+      /***********
+       * Ausgabe in Html
+       ***********/
+      element.innerHTML += "Plus Rechnen";
+      element.innerHTML += "<p>8 + 10 = " + rechnenplus(8, 10) + "</p>";
+      element.innerHTML += "<p>3 + 5 = " + rechnenplus(3, 5) + "</p>";
+
+      element.innerHTML += "Minus Rechnen";
+      element.innerHTML += "<p>8 - 10 = " + rechnenminus(8, 10) + "</p>";
+      element.innerHTML += "<p>3 - 5 = " + rechnenminus(3, 5) + "</p>";
+
+      element.innerHTML += "Mal Rechnen";
+      element.innerHTML += "<p>8 * 10 = " + rechnenmal(8, 10) + "</p>";
+      element.innerHTML += "<p>3 * 5 = " + rechnenmal(3, 5) + "</p>";
+
+      element.innerHTML += "Geteilt Rechnen";
+      element.innerHTML += "<p>8 / 10 = " + rechnengeteilt(8, 10) + "</p>";
+      element.innerHTML += "<p>3 / 5 = " + rechnengeteilt(3, 5) + "</p>";
+    </script>
+  </body>
+</html>

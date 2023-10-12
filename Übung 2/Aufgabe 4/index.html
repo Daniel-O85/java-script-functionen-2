@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="kontakt"><h1>Aufgabe 4</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * Array beinhaltet 4 Objekte
+       ***********/
+      const person = [
+        {
+          Vorname: "Daniel",
+          Nachname: "Ottinger",
+          Alter: "37 Jahre",
+          Adresse: "Leverkusen",
+        },
+        {
+          Vorname: "Peter",
+          Nachname: "Pan",
+          Alter: "12 Jahre",
+          Adresse: "Nimmerland",
+        },
+        {
+          Vorname: "Jimm",
+          Nachname: "Knopf",
+          Alter: "23 Jahre",
+          Adresse: "Lummerland",
+        },
+        {
+          Vorname: "Benjamin",
+          Nachname: "Blümchen",
+          Alter: "56 Jahre",
+          Adresse: "Neustadt",
+        },
+      ];
+
+      /***********
+       * Funktion
+       ***********/
+      function Kontakte(list) {
+        const element = document.getElementById("kontakt");
+        for (let l = 0; l < list.length; l++)
+          element.innerHTML +=
+            "<b>Kontakt</b> " +
+            (l + 1) +
+            "<br>" +
+            "Vorname: " +
+            list[l].Vorname +
+            "<br>" +
+            "Nachname: " +
+            list[l].Nachname +
+            "<br>" +
+            "<br>";
+        "Alter: " + list[l].Alter + "<br>" + "<br>";
+        "Adresse: " + list[l].Adresse;
+      }
+
+      /***********
+       * Ausgabe in Html
+       ***********/
+      Kontakte(person);
+    </script>
+  </body>
+</html>

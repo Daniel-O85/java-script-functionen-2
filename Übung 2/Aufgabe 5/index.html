@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="schwer"><h1>Aufgabe 5</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      const element = document.getElementById("schwer");
+      /***********
+       *
+       ***********/
+      let Arrays = [
+        ["Tomate", "Gurke", "Paprika", "Zwiebel", "Pilze"],
+        ["Apfel", "Banane", "Kiwi", "Mango", "Orange"],
+        ["Audi", "BMW", "Mercedes", "Porsche", "VW"],
+        ["Deutschland", "England", "Spanien", "Italien"],
+      ];
+      /***********
+       * Funktion 1
+       ***********/
+
+      function Listen(eintrag) {
+        element.innerHTML += "<p>---- Neue Liste ----</p>";
+        for (let loop = 0; loop < eintrag.length; loop++)
+          element.innerHTML += "<p>" + eintrag[loop] + "</p>";
+      }
+      /***********
+       * Funktion 2
+       ***********/
+      function anzeigen(eintrag) {
+        for (let loop = 0; loop < eintrag.length; loop++) Listen(eintrag[loop]);
+      }
+
+      /***********
+       * Ausgabe in Html
+       ***********/
+      anzeigen(Arrays);
+    </script>
+  </body>
+</html>

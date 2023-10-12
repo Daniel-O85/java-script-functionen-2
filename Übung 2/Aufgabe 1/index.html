@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="inhalt"><h1>Aufgabe 1</h1></div>
+
+    <!-------------
+      JavaScript
+    -------------->
+    <script>
+      /***********
+       * Verbindungsaufbau
+       ***********/
+      const element = document.getElementById("inhalt");
+
+      /***********
+       * Funktion Rechnen
+       ***********/
+      function rechnen(j, r) {
+        return j + r - 2;
+      }
+
+      /***********
+       * Ausgabe in Html
+       ***********/
+      element.innerHTML += "<p>8 + 10 - 2 = " + rechnen(8, 10) + "</p>";
+      element.innerHTML += "<p>3 + 5 - 2 = " + rechnen(3, 5) + "</p>";
+      element.innerHTML += "<p>7 + 7 - 2 = " + rechnen(7, 7) + "</p>";
+      element.innerHTML += "<p>4 + 6 - 2 = " + rechnen(4, 6) + "</p>";
+    </script>
+  </body>
+</html>

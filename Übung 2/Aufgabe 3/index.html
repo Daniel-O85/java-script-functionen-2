@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="array"><h1>Aufgabe 3</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * Array
+       ***********/
+      const Obst = ["Apfel", "Banane", "Kiwi", "Mango", "Orange"];
+
+      /***********
+       * Funktion
+       ***********/
+      function Obstliste(x) {
+        const element = document.getElementById("array");
+        for (let Liste = 0; Liste < x.length; Liste++)
+          element.innerHTML += "<p>" + x[Liste] + "</p>";
+      }
+      /***********
+       * Ausgabe in Html
+       ***********/
+      Obstliste(Obst);
+    </script>
+  </body>
+</html>
